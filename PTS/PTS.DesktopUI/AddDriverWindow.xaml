@@ -1,0 +1,24 @@
+﻿<Window x:Class="PTS.DesktopUI.AddDriverWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PTS.DesktopUI"
+        Name="wndAddDriverWindow"
+        mc:Ignorable="d"
+        Title="PTS - Add driver" Height="210" Width="300" Icon="Images/MainIcon.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Name="grdAddDriver">
+        <GroupBox x:Name="grbAddDriver" Margin="10,10,10,0" Height="109" VerticalAlignment="Top" BorderBrush="Blue">
+            <Grid Name="grdIntoAddDriver" Margin="0,0,0,0">
+                <Label x:Name="lblName" Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+                <Label x:Name="lblSurname" Content="Surname" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtName" Height="26" Margin="119,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" BorderBrush="Blue"/>
+                <TextBox x:Name="txtSurname" Margin="119,41,10,0" VerticalAlignment="Top" Height="25" BorderBrush="Blue"/>
+                <Label x:Name="lblBusNumber" Content="Bus number" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtBusNumber" Margin="119,71,10,0" VerticalAlignment="Top" Height="25" BorderBrush="Blue"/>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="55,137,0,0" VerticalAlignment="Top" Width="75" IsDefault="True" Background="{x:Null}" BorderBrush="Blue" Click="btnAdd_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="175,137,0,0" Width="75" IsCancel="True" Height="22" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="Blue"/>
+    </Grid>
+</Window>

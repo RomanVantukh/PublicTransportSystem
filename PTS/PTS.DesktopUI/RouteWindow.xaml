@@ -1,0 +1,50 @@
+﻿<Window x:Class="PTS.DesktopUI.RouteWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PTS.DesktopUI"
+        mc:Ignorable="d"
+        Name = "wndRoute"
+        Title="PTS - Routes" MinHeight="450" MinWidth="650" Height="450" Width="650" WindowStartupLocation="CenterScreen" Icon="Images/MainIcon.png">
+    <Grid Name="grdRoutes">
+        <Image x:Name="imgLogo" HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" VerticalAlignment="Top" Width="40" Source="Images/Route.png"/>
+        <Label x:Name="lblTitle" Content="Routes" FontSize="20" Margin="0,15,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Elephant" Background="White" Foreground="Black" Width="82"/>
+        <GroupBox x:Name="gbxLeftMenu" Header="Search" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Height="229" Width="180" BorderBrush="Blue">
+            <Grid x:Name="grdLeftMenu">
+                <Label x:Name="lblStation" Content="Station" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top"/>
+                <ComboBox x:Name="cmbStation" Margin="10,41,10,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="Blue"/>
+                <Label x:Name="lblMaxPrice" Content="Max price" HorizontalAlignment="Left" Margin="0,77,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtMaxPrice" Height="26" Margin="80,77,10,0" TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="Blue"/>
+                <Label x:Name="lblMaxDuration" Content="Max duration" HorizontalAlignment="Left" Margin="0,117,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtMaxDuration" Height="26" Margin="80,117,10,0" TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="Blue"/>
+                <Button x:Name="btnSearch" Content="Search" Margin="0,0,0,20" Width="70" VerticalAlignment="Bottom" Background="{x:Null}" BorderBrush="Blue" Click="btnSearch_Click"/>
+            </Grid>
+        </GroupBox>
+        <DataGrid x:Name="dgrDataRoutes" IsReadOnly="True" Margin="200,73,10,92" AutoGenerateColumns="False" Background="{x:Null}" BorderBrush="Blue" FontFamily="Comic Sans MS" Foreground="Black" VerticalGridLinesBrush="Blue" GridLinesVisibility="Vertical">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=Id}" ClipboardContentBinding="{x:Null}" FontFamily="Comic Sans MS" Header="Route Id"/>
+                <DataGridTextColumn Binding="{Binding Path=Number}" ClipboardContentBinding="{x:Null}" FontFamily="Comic Sans MS" Header="Number"/>
+                <DataGridTextColumn Binding="{Binding Path=Distance}" ClipboardContentBinding="{x:Null}" FontFamily="Comic Sans MS" Header="Distance"/>
+                <DataGridTextColumn Binding="{Binding Path=Price}" ClipboardContentBinding="{x:Null}" FontFamily="Comic Sans MS" Header="Price"/>
+                <DataGridTextColumn Binding="{Binding Path=Duration}" ClipboardContentBinding="{x:Null}" FontFamily="Comic Sans MS" Header="Duration"/>
+                <DataGridTextColumn Binding="{Binding Path=Customer}" ClipboardContentBinding="{x:Null}" FontFamily="Comic Sans MS" Header="Customer"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Name="grdBottomMenu" Height="77" Margin="200,0,10,10" VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnBuses" Content="Buses" Margin="0,0,0,45" Width="70" VerticalAlignment="Bottom" Background="{x:Null}" BorderBrush="Blue" Grid.Column="0" Click="btnBuses_Click"/>
+            <Button x:Name="btnStations" Content="Stations" Margin="0,0,0,45" Width="70" VerticalAlignment="Bottom" Background="{x:Null}" BorderBrush="Blue" Grid.Column="1" Click="btnStations_Click"/>
+            <Button x:Name="btnTimeTable" Content="Schedule" Margin="0,0,0,45"  Background="{x:Null}" BorderBrush="Blue" IsCancel="True" Grid.Column="2" Height="22" Width="70" VerticalAlignment="Bottom" Click="btnTimeTable_Click"/>
+            <Button x:Name="btnAdd" Content="Add" Margin="0,0,0,12" Width="70" VerticalAlignment="Bottom" Background="{x:Null}" BorderBrush="Blue" Click="btnAdd_Click" />
+            <Button x:Name="btnModify" Content="Modify" Margin="0,0,0,12" Width="70" VerticalAlignment="Bottom"  Background="{x:Null}" BorderBrush="Blue" Grid.Column="1" Click="btnModify_Click" />
+            <Button x:Name="btnDelete" Content="Delete" Margin="0,0,0,12" Width="70" VerticalAlignment="Bottom"  Background="{x:Null}" BorderBrush="Blue" Grid.Column="2" Click="btnDelete_Click"/>
+
+        </Grid>
+        <Button x:Name="btnMainMenu" Content="Main menu" Margin="0,25,10,0" VerticalAlignment="Top"  Background="{x:Null}" BorderBrush="Blue" IsCancel="True" HorizontalAlignment="Right" Width="79"/>
+    </Grid>
+</Window>
