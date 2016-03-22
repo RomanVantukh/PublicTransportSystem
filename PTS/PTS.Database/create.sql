@@ -1,7 +1,4 @@
-﻿--CREATE DATABASE PTS;
---GO
-
-USE PTS;
+﻿USE PTS;
 GO
 
 CREATE TABLE tblCustomer

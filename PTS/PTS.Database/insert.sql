@@ -4,11 +4,11 @@ GO
 SET IDENTITY_INSERT tblCustomer ON;
 
 INSERT INTO tblCustomer(Id, [Login], [Password], Name, Surname, Mode)
-VALUES	(1, 'roman.vantukh@gmail.com', '8eb65b037534af3177bb9dd4c1e38d29b5651d09cbb220a25abfa6c8cde73966', 'Roman', 'Vantukh', 0),
-		(2, 'andriy.moroz@yahoo.com', '793843bfd647d6c30122c8889cba3fb9e80012d6f4084720c71bdd2af82660e3', 'Andriy', 'Moroz', 0),
-		(3, 'marta.bila@gmail.com', '0f1f7d4e3021679370a1eef573c5ca205b47a0e5795d1dc0152bb65236fbe7fc', 'Marta', 'Bila', 1),
-		(4, 'ivan.kozak@ua.com', 'f4a2043159ead1bf29d8d3c2d5903930548d15f20c814fb51119fdcd333ddda1', 'Ivan', 'Kozak', 1),
-		(5, 'orest.kit@gmail.com', '5180c91d187fb7712d00d757cf7fe34ca7990b1ec0d16811a9a172c0b0649570', 'Orest', 'Kit', 1)
+VALUES	(1, 'roman.vantukh@gmail.com', '8eb65b037534af3177bb9dd4c1e38d29b5651d09cbb220a25abfa6c8cde73966', 'Roman', 'Vantukh', 0), --RomanVantukh123
+		(2, 'andriy.moroz@yahoo.com', '793843bfd647d6c30122c8889cba3fb9e80012d6f4084720c71bdd2af82660e3', 'Andriy', 'Moroz', 0), --AndriyMoroz123
+		(3, 'marta.bila@gmail.com', '0f1f7d4e3021679370a1eef573c5ca205b47a0e5795d1dc0152bb65236fbe7fc', 'Marta', 'Bila', 1),  --MartaBila123
+		(4, 'ivan.kozak@ua.com', 'f4a2043159ead1bf29d8d3c2d5903930548d15f20c814fb51119fdcd333ddda1', 'Ivan', 'Kozak', 1),  --IvanKozak123
+		(5, 'orest.kit@gmail.com', '5180c91d187fb7712d00d757cf7fe34ca7990b1ec0d16811a9a172c0b0649570', 'Orest', 'Kit', 1) --OrestKit123
 
 SET IDENTITY_INSERT tblCustomer OFF;
 
