@@ -9,6 +9,7 @@ using PTS.Entities;
 
 namespace PTS.Repositories
 {
+    // IP: All interfaces & repositories (even when tiny) should be distinguished, hence - stored in different files
     public interface IBusRepository
     {
         List<Bus> SelectAll();
